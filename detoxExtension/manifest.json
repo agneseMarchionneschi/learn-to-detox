@@ -1,0 +1,27 @@
+{
+  "name": "TensorFlow Toxity Recognition Chrome Extension",
+  "version": "0.1",
+  "icons": {"128": "128.png" },
+  "description": "TensorFlow chrome extension for analyzing text toxicity",
+  "author": "Agnese Marchionneschi",
+  "browser_action": {
+    "default_popup": "index.html"
+  },
+  "permissions": [
+    "tabs","<all_urls>",
+    "activeTab"
+  ],
+  "options_page": "index.html",
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": ["tfjs.js", "toxicity.js", "index.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "manifest_version": 2
+}

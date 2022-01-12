@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <link href="css/home.css" rel="stylesheet">
+</head>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="home.html">Learn to Detox</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link" href="home.html">Home</a>
+        <a class="nav-link" href="learn.html">Learn</a>
+        <a class="nav-link" href="toxicity.html">Try</a>
+        <a class="nav-link" href="speech.html">Speech Detection</a>
+        <a class="nav-link" href="examples.html">Examples</a>
+      </div>
+    </div>
+  </div>
+</nav>
+<body>
+<h3>
+Learn how Toxicity of Tensorflow.js works</h3>
+<p>
+  To start labelling text, first adjust the model settings for your needs, and check for saving.</br></br>
+  The threshold parameter is the minimum confidence level above which a prediction is considered valid. Setting threshold to a higher value means that predictions are more likely to return null or false, because they fall beneath the threshold.
+The labelsToInclude parameter is an array of strings that indicates which of the seven toxicity labels you’d like predictions for. The labels are: toxicity | severe_toxicity | identity_attack | insult | threat | sexual_explicit | obscene. By default the model will return predictions for all seven labels.
+The predictions are an array of objects, one for each toxicity label, that contain the raw probabilities for each input sentence along with the final prediction. The final prediction can be one of three values:
+true if the probability of a match exceeds the confidence threshold,
+false if the probability of not a match exceeds the confidence threshold, and
+null if neither probability exceeds the threshold.
+</p>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+ </body>
+</html>

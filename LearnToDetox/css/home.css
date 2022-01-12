@@ -1,0 +1,57 @@
+body{
+	background-color: #212529;
+	font-family: 'Montserrat', sans-serif;
+}
+
+h1{
+	font-size: 5rem;
+	text-align: center;
+	color: white;
+	padding-top: 2rem;
+	letter-spacing: 5px;
+	font-family: 'Montserrat', sans-serif;
+}
+
+h3{
+	margin-top: 3rem;
+	text-align: center;
+	margin-right: 6rem;
+	margin-left: 6rem;
+	color: white;
+	line-height: 45px;
+
+}
+#toxic {
+  background: gray;
+  color: white;
+  border: none;
+  padding: 5px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.cat {
+  background: lightgray;
+  color: white;
+  padding: 4px 10px;
+}
+#toxic:disabled {
+  opacity: 0.3;
+}
+main{
+	
+
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+
+    position: relative;
+    color: white;
+}
+p{
+  font-size: 1rem;
+  padding:30px;
+  color: white;
+  padding-top: 2rem;
+  font-family: 'Montserrat', sans-serif;
+}

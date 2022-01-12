@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Speech Toxicity Detection</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/speech.css">
+</head>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="home.html">Learn to Detox</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link" href="home.html">Home</a>
+        <a class="nav-link" href="learn.html">Learn</a>
+        <a class="nav-link" href="toxicity.html">Try</a>
+        <a class="nav-link" href="speech.html">Speech Detection</a>
+        <a class="nav-link" href="examples.html">Examples</a>
+      </div>
+    </div>
+  </div>
+</nav>
+<body>
+    <div class="container">
+        <div class="voice-to-text-box">
+            <p class="voice-to-text-show start_opacity" id="voice-to-text-show">
+                Press the button below to start toxicity detection
+            </p>
+        </div>
+        <div class="toxicity-result-box">
+            <p class="toxicity-result start_opacity" id="toxicity_result">
+                
+            </p>
+
+        </div>
+        <button class="record-toggle-button" id="recording_button">
+            <img width="32" height="32" id="recording_icon" src="./assets/microphone.svg" alt="recording icon" />
+        </button>
+        <div class="footer">
+    
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/toxicity"></script>
+    <script src="./script/speech.js"></script>
+</body>
+</html>

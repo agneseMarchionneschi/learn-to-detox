@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Try</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/toxicity.css">
+</head>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="home.html">Learn to Detox</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link" href="home.html">Home</a>
+        <a class="nav-link" href="learn.html">Learn</a>
+        <a class="nav-link" href="toxicity.html">Try</a>
+        <a class="nav-link" href="speech.html">Speech Detection</a>
+        <a class="nav-link" href="examples.html">Examples</a>
+      </div>
+    </div>
+  </div>
+</nav>
+<body>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+
+<p id="instructions">Set threshold, check to save your preferences, write some toxic phrases and check toxicity.  </br>
+</p>
+
+<main>
+  <div class="loading">Loading...</div>
+  <section class="info">
+    <div>
+      <span class="count" id="info-word_count">0</span> words </br> <span class="count" id="info-char_count">0</span> characters
+    </div>
+      <div>
+         <form class="options">
+        <input type="submit" style="position: absolute; left: -9999px"/>
+      </form>
+        
+        
+        <button id="toxic" disabled="true" >Check Toxicity</button>
+      </div>
+      
+      <select id="soglia">
+        <option value="0.2">Low threshold</option>
+        <option value="0.5" selected="selected">Medium threshold</option>
+        <option value="0.8">High treshold</option>
+      </select>
+      <input type="checkbox" id="enable_toxicity">
+      <label for="enable_toxicity">Check to save</label>
+      <button class="btn" onClick="window.location.reload();">Clear</button>
+
+      
+    </div>
+  </section>
+  <textarea></textarea>  
+  <div class="toxicity-wrapper">
+    <div class="cat identity_attack">Identity Attack</div>
+
+    <div class="cat insult">Insult</div> 
+
+    <div class="cat obscene">Obscene</div>
+
+    <div class="cat severe_toxicity">Severe Toxicity</div>
+
+    <div class="cat sexual_explicit">Sexual Explicit</div>
+
+    <div class="cat threat">Threat</div>
+  
+    <div class="cat toxicity">Toxicity</div>
+  </div>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/toxicity"></script>
+<script  src="script/toxicity.js"></script>
+</body>
+</html>
